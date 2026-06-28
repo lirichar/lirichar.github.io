@@ -3,170 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f7f4ee" />
-  <meta name="description" content="lirichar 的个人主页：一个兴趣使然的个人开发者，记录 AIGC、游戏自动化、LLM 工具与 Wear OS 康复监测项目。" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="lirichar 的个人主页。" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="lirichar" />
-  <meta property="og:description" content="兴趣使然的个人开发者，尝试在 AI 时代的洪流中乘上船，做一个认真修工具的水手。" />
-  <meta property="og:image" content="https://lirichar.github.io/img/avatar.jpg" />
-  <title>lirichar | 兴趣使然的个人开发者</title>
+  <meta property="og:description" content="兴趣使然的个人开发者。" />
+  <title>lirichar</title>
   <link rel="icon" href="/img/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/portfolio.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav" aria-label="主导航">
-      <a class="brand" href="/">lirichar</a>
-      <div class="nav-links">
-        <a href="#projects">项目</a>
+  <main class="page">
+    <header class="site-header">
+      <a class="site-name" href="/">lirichar</a>
+      <nav class="nav" aria-label="主导航">
         <a href="/archives/">文章</a>
-        <a href="#stack">技术栈</a>
         <a href="https://github.com/lirichar" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </nav>
+        <a href="mailto:745092859@qq.com">Email</a>
+      </nav>
+    </header>
 
-    <section class="hero-content" aria-labelledby="intro-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Personal Developer / AI Explorer</p>
-        <h1 id="intro-title">你好，我是 lirichar。</h1>
-        <p class="lead">
-          一个兴趣使然的个人开发者，正在尝试在 AI 时代的洪流里乘上 AI 的船。
-          我不太想给自己贴很大的标签，更像是一个水手：边学边做，边试航边修补，把模型、工具和真实需求接到一起。
-        </p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#projects">查看项目</a>
-          <a class="secondary-action" href="/archives/">阅读文章</a>
-          <a class="secondary-action" href="mailto:745092859@qq.com">联系我</a>
-        </div>
-      </div>
-
-      <aside class="profile-panel" aria-label="个人信息">
-        <img src="/img/avatar.jpg" alt="lirichar 头像" />
-        <div>
-          <strong>工程方向</strong>
-          <span>AI 工具实验、自动化系统、LLM 学习工具与感知数据采集</span>
-        </div>
-      </aside>
-    </section>
-  </header>
-
-  <main>
-    <section class="section intro-section" aria-label="简介">
+    <!-- 首页文本从这里开始改 -->
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="label">Personal Developer</p>
+      <h1 id="intro-title">你好，我是 lirichar。</h1>
       <p>
-        我从算法竞赛和工具开发出发，慢慢把兴趣延伸到 AIGC 服务化、计算机视觉识别、
-        LLM 解析、Web 3D 预览、移动端传感数据和 BLE 通信等方向。很多东西还在探索，
-        但我喜欢把看起来新鲜的 AI 能力做成能跑、能看、能反复调整的小系统。原来的博客文章仍然保留在
-        <a href="/archives/">文章归档</a>，包括算法题解和 ACM 模板记录。
+        一个兴趣使然的个人开发者。正在尝试在 AI 时代的洪流里乘上 AI 的船，
+        做一个边学边做、边试航边修补的水手。
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="about-title">
+      <h2 id="about-title">关于</h2>
+      <p>
+        我从算法竞赛和工具开发出发，慢慢摸索 AIGC、游戏自动化、LLM 学习工具、
+        可穿戴数据采集这些方向。很多东西还在试，但我喜欢把新鲜的想法做成能跑的小系统。
       </p>
     </section>
 
     <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <p class="eyebrow">Selected Work</p>
-        <h2 id="projects-title">重点项目</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card feature-card">
-          <div class="project-meta">AIGC / Model Serving / 3D Preview</div>
-          <h3>AIGC 资产生成全栈平台</h3>
-          <p>
-            搭建支持图像、视频、3D 模型生成与在线预览的闭环平台，围绕异步任务编排、
-            Diffusers 服务化、资源管理和 Web 3D 展示，把 AI 资产从生成到交付串成完整流程。
-          </p>
-          <ul>
-            <li>高并发异步队列承接耗时生成任务，降低前端等待和服务阻塞。</li>
-            <li>将 Diffusers 推理能力服务化，加速图像与视频资产生成落地。</li>
-            <li>支持 3D 模型在线预览，让生成结果可以即时检查与迭代。</li>
-          </ul>
-          <a href="https://github.com/lirichar/paltform-of-charactor-models" target="_blank" rel="noopener">查看公开仓库</a>
+      <h2 id="projects-title">项目</h2>
+      <div class="project-list">
+        <article>
+          <h3>AIGC 资产生成平台</h3>
+          <p>图像、视频、3D 模型生成与预览相关的尝试。</p>
         </article>
-
-        <article class="project-card">
-          <div class="project-meta">CV / OCR / RL / Game Automation</div>
+        <article>
           <h3>《学园偶像大师》自动育成系统</h3>
-          <p>
-            实现集状态识别与策略优化于一体的游戏自动化系统，结合 OCR、模板匹配和强化学习策略，
-            对育成过程中的状态变化与决策收益进行自动化判断和迭代。
-          </p>
-          <ul>
-            <li>用计算机视觉识别游戏画面状态，构建可执行的自动化控制链路。</li>
-            <li>通过策略优化与强化学习思路持续改进行动选择。</li>
-            <li>关注稳定性、可观测性和复杂流程中的容错恢复。</li>
-          </ul>
+          <p>基于 OCR、模板匹配和策略优化的游戏自动化实验。</p>
         </article>
-
-        <article class="project-card">
-          <div class="project-meta">LLM / NLP / Hook / Learning Tool</div>
+        <article>
           <h3>unaTranslator 智能学习工具</h3>
-          <p>
-            二开定制集成大模型解析与游戏翻译的学习系统，把 LLM 语法解析、内存 Hook 文本注入、
-            NLP 处理和复习流程连接起来，让游戏文本从即时翻译延伸为可复盘的学习材料。
-          </p>
-          <ul>
-            <li>接入大语言模型分析句法、词义和语境，提升翻译与学习解释质量。</li>
-            <li>通过文本捕获与注入能力降低手动复制成本。</li>
-            <li>将生词、例句和复习数据沉淀为闭环学习资产。</li>
-          </ul>
+          <p>围绕 LLM 解析、游戏翻译和复习闭环做的二次开发。</p>
         </article>
-
-        <article class="project-card">
-          <div class="project-meta">Wear OS / BLE / Time-series Data</div>
+        <article>
           <h3>Wear OS 上肢康复监测系统</h3>
-          <p>
-            开发软硬件协同的医疗康复数据采集系统，通过 Wear OS 与移动端双端架构、
-            低功耗蓝牙同步和毫秒级时序采样分析，为上肢康复训练提供更精准的监测数据。
-          </p>
-          <ul>
-            <li>设计手表端与手机端协同的数据采集、同步和展示流程。</li>
-            <li>使用 BLE 进行低功耗设备通信，适配康复训练场景。</li>
-            <li>处理高频时序数据，为动作分析和康复评估提供基础。</li>
-          </ul>
+          <p>使用 Wear OS、BLE 和时序数据采集做康复监测方向的尝试。</p>
         </article>
       </div>
     </section>
+    <!-- 首页文本到这里结束 -->
 
-    <section class="section public-work" aria-labelledby="public-title">
-      <div class="section-heading">
-        <p class="eyebrow">Public Repositories</p>
-        <h2 id="public-title">公开项目线索</h2>
-      </div>
-      <div class="repo-list">
-        <a href="https://github.com/lirichar/screenshot_translator" target="_blank" rel="noopener">
-          <strong>screenshot_translator</strong>
-          <span>Python 截图翻译实验，延续工具化语言学习方向。</span>
-        </a>
-        <a href="https://github.com/lirichar/Turn-off-the-light" target="_blank" rel="noopener">
-          <strong>Turn-off-the-light</strong>
-          <span>Windows 选区高亮/遮罩小工具，用快捷键控制沉浸式观看区域。</span>
-        </a>
-        <a href="https://github.com/lirichar/lirichar.github.io" target="_blank" rel="noopener">
-          <strong>lirichar.github.io</strong>
-          <span>个人博客与作品集入口，记录算法、项目和折腾过程。</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section stack-section" id="stack" aria-labelledby="stack-title">
-      <div class="section-heading">
-        <p class="eyebrow">Stack</p>
-        <h2 id="stack-title">我正在摸索的方向</h2>
-      </div>
-      <div class="stack-grid">
-        <div><strong>生成式工具</strong><span>Diffusers、LLM 接入、异步推理队列、生成任务编排</span></div>
-        <div><strong>自动化实验</strong><span>OCR、模板匹配、状态机、策略优化、强化学习尝试</span></div>
-        <div><strong>应用小系统</strong><span>模型服务封装、任务编排、数据流设计、3D 模型在线预览</span></div>
-        <div><strong>设备与数据</strong><span>Wear OS、BLE、双端同步、毫秒级时序数据采样</span></div>
-      </div>
-    </section>
+    <footer class="footer">
+      <span>© 2026 lirichar</span>
+      <a href="/archives/">文章归档</a>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <span>© 2026 lirichar</span>
-    <a href="https://github.com/lirichar" target="_blank" rel="noopener">github.com/lirichar</a>
-  </footer>
 </body>
 </html>
