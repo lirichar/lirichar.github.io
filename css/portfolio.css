@@ -254,7 +254,7 @@ h3 {
 .project-list article {
   position: relative;
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
+  grid-template-columns: 76px minmax(0, 1fr) auto;
   gap: 24px;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
@@ -296,6 +296,25 @@ h3 {
 .project-list article p {
   grid-column: 2;
   margin-bottom: 0;
+  color: var(--muted);
+}
+
+.project-list h3 a {
+  text-decoration: none;
+}
+
+.project-link {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  border: 1px solid currentColor;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.project-link.is-muted {
   color: var(--muted);
 }
 
@@ -387,5 +406,11 @@ h3 {
   .project-list article {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 14px;
+  }
+
+  .project-link {
+    grid-column: 2;
+    grid-row: auto;
+    justify-self: start;
   }
 }
