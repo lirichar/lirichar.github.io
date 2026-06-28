@@ -284,6 +284,92 @@ img {
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+.pagination-post {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 28px !important;
+}
+
+.pagination-post .prev-post,
+.pagination-post .next-post,
+.pagination-post .pull-left,
+.pagination-post .pull-right,
+.pagination-post .pull-full {
+  float: none !important;
+  width: auto !important;
+}
+
+.pagination-post a {
+  min-height: 150px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 28px !important;
+  overflow: hidden;
+}
+
+.pagination-post .cover {
+  display: none !important;
+}
+
+.pagination-post .pagination-info {
+  position: static !important;
+  width: auto !important;
+  padding: 0 !important;
+  color: #000000 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+
+.pagination-post .label {
+  display: block !important;
+  margin-bottom: 10px;
+  color: #555555 !important;
+  font-size: 0.82rem !important;
+}
+
+.pagination-post .prev_info,
+.pagination-post .next_info {
+  color: #000000 !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  line-height: 1.3;
+}
+
+.pagination-post a:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.pagination-post a:hover .label,
+.pagination-post a:hover .prev_info,
+.pagination-post a:hover .next_info {
+  color: #ffffff !important;
+}
+
+.post-directory-link {
+  margin-top: 34px;
+}
+
+.post-directory-link a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  border: 1px solid #000000;
+  padding: 0 18px;
+  color: #000000 !important;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.post-directory-link a:hover {
+  background: #000000;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
 button,
 input,
 .search-close-button,
@@ -397,6 +483,10 @@ figure.highlight,
 
   #content-inner.layout {
     padding: 22px 16px 54px !important;
+  }
+
+  .pagination-post {
+    grid-template-columns: 1fr;
   }
 
   .recent-post-info,
