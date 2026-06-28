@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/portfolio.css" />
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
   <main class="page">
     <header class="site-header">
       <a class="site-name" href="/">lirichar</a>
@@ -25,15 +26,21 @@
 
     <!-- 首页文本从这里开始改 -->
     <section class="intro" aria-labelledby="intro-title">
-      <p class="label">Personal Developer</p>
-      <h1 id="intro-title">你好，我是 lirichar。</h1>
-      <p>
-        一个兴趣使然的个人开发者。正在尝试在 AI 时代的洪流里乘上 AI 的船，
-        做一个边学边做、边试航边修补的水手。
-      </p>
+      <div class="intro-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="intro-copy">
+        <p class="label">Personal Developer</p>
+        <h1 id="intro-title">你好，我是 lirichar。</h1>
+        <p>
+          一个兴趣使然的个人开发者。正在尝试在 AI 时代的洪流里乘上 AI 的船，
+          做一个边学边做、边试航边修补的水手。
+        </p>
+      </div>
     </section>
 
-    <section class="section" aria-labelledby="about-title">
+    <section class="section split-section" aria-labelledby="about-title">
       <h2 id="about-title">关于</h2>
       <p>
         我从算法竞赛和工具开发出发，慢慢摸索 AIGC、游戏自动化、LLM 学习工具、
@@ -45,18 +52,22 @@
       <h2 id="projects-title">项目</h2>
       <div class="project-list">
         <article>
+          <span class="project-index">01</span>
           <h3>AIGC 资产生成平台</h3>
           <p>图像、视频、3D 模型生成与预览相关的尝试。</p>
         </article>
         <article>
+          <span class="project-index">02</span>
           <h3>《学园偶像大师》自动育成系统</h3>
           <p>基于 OCR、模板匹配和策略优化的游戏自动化实验。</p>
         </article>
         <article>
+          <span class="project-index">03</span>
           <h3>unaTranslator 智能学习工具</h3>
           <p>围绕 LLM 解析、游戏翻译和复习闭环做的二次开发。</p>
         </article>
         <article>
+          <span class="project-index">04</span>
           <h3>Wear OS 上肢康复监测系统</h3>
           <p>使用 Wear OS、BLE 和时序数据采集做康复监测方向的尝试。</p>
         </article>
