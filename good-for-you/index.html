@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我都是为了你好</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="screen intro" id="introScreen">
+        <div class="intro-copy">
+          <span class="stamp">正式版骨架 0.2</span>
+          <h1>我都是为了你好</h1>
+          <p>输入一句你对孩子的期待。系统会把这句话解析成家庭画像和孩子底色，再用随机种子生成一条从出生到高考后的成长路线。</p>
+        </div>
+
+        <form class="start-form" id="startForm">
+          <label for="wishInput">你对孩子说的第一句话</label>
+          <textarea id="wishInput" maxlength="90" placeholder="例：我希望你考上清华北大，别像我一样辛苦。"></textarea>
+
+          <div class="field-grid">
+            <div>
+              <label for="seedInput">随机种子</label>
+              <div class="seed-row">
+                <input id="seedInput" type="text" maxlength="20" placeholder="留空自动生成">
+                <button class="icon-button" type="button" id="rollSeedButton" title="换一个种子" aria-label="换一个种子">↻</button>
+              </div>
+            </div>
+            <div>
+              <label for="modeSelect">局长</label>
+              <select id="modeSelect">
+                <option value="standard">标准局：五十四个阶段</option>
+                <option value="quick">速通局：七个阶段</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="primary" type="submit">开始这一生</button>
+        </form>
+      </section>
+
+      <section class="screen play hidden" id="playScreen" aria-live="polite">
+        <header class="topbar">
+          <div>
+            <span class="stamp" id="seedBadge"></span>
+            <h2>成长档案</h2>
+          </div>
+          <button class="secondary" id="restartButton" type="button">重新开局</button>
+        </header>
+
+        <section class="dossier">
+          <div>
+            <span>父母画像</span>
+            <strong id="parentType"></strong>
+          </div>
+          <div>
+            <span>孩子底色</span>
+            <strong id="childType"></strong>
+          </div>
+          <div>
+            <span>话语标签</span>
+            <strong id="tagLine"></strong>
+          </div>
+          <div>
+            <span>过程路线</span>
+            <strong id="routeLine"></strong>
+          </div>
+        </section>
+
+        <section class="meters" aria-label="属性">
+          <div class="meter">
+            <span>学业</span>
+            <div><i id="academicBar"></i></div>
+            <strong id="academicValue"></strong>
+          </div>
+          <div class="meter">
+            <span>自我</span>
+            <div><i id="selfBar"></i></div>
+            <strong id="selfValue"></strong>
+          </div>
+          <div class="meter">
+            <span>亲密</span>
+            <div><i id="bondBar"></i></div>
+            <strong id="bondValue"></strong>
+          </div>
+          <div class="meter">
+            <span>压力</span>
+            <div><i id="pressureBar"></i></div>
+            <strong id="pressureValue"></strong>
+          </div>
+        </section>
+
+        <section class="stage-card" id="stageCard">
+          <div class="stage-meta">
+            <span id="stageIndex"></span>
+            <span id="stageAge"></span>
+          </div>
+          <h3 id="eventTitle"></h3>
+          <div class="route-badge" id="eventRoute"></div>
+          <p id="eventBody"></p>
+          <div class="echo" id="wishEcho"></div>
+        </section>
+
+        <section class="choice-panel">
+          <h3>你会怎么回应？</h3>
+          <div class="choices" id="choices"></div>
+        </section>
+
+        <section class="log-panel">
+          <h3>已经发生</h3>
+          <ol class="timeline" id="timeline"></ol>
+        </section>
+      </section>
+
+      <section class="screen result hidden" id="resultScreen" aria-live="polite">
+        <header class="topbar">
+          <div>
+            <span class="stamp" id="resultSeedBadge"></span>
+            <h2>最终结果</h2>
+          </div>
+          <button class="secondary" id="resultRestartButton" type="button">重新开局</button>
+        </header>
+
+        <section class="ticket" id="ticketPanel">
+          <div class="ticket-label" id="ticketLabel"></div>
+          <h2 id="endingTitle"></h2>
+          <p id="endingText"></p>
+          <p class="reflection" id="reflectionText"></p>
+        </section>
+
+        <section class="result-grid">
+          <div class="panel">
+            <h3>父母画像</h3>
+            <p id="resultParent"></p>
+          </div>
+          <div class="panel">
+            <h3>孩子留下的话</h3>
+            <p id="childLine"></p>
+          </div>
+          <div class="panel">
+            <h3>评论区开局</h3>
+            <p id="commentHook"></p>
+          </div>
+          <div class="panel">
+            <h3>结局收集</h3>
+            <p id="collectionValue"></p>
+          </div>
+        </section>
+
+        <section class="share">
+          <h3>复制分享文本</h3>
+          <textarea id="shareText" readonly></textarea>
+          <div class="actions">
+            <button class="secondary" id="copyButton" type="button">复制</button>
+            <button class="secondary" id="sameWishButton" type="button">同一句话再来一次</button>
+            <button class="secondary" id="reviewButton" type="button">回看成长档案</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

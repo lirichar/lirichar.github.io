@@ -1,0 +1,12 @@
+{
+  "name": "good-for-you",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server . -p 4173 -c-1",
+    "test": "node ./scripts/smoke-test.mjs",
+    "deploy:check": "node ./scripts/deploy-check.mjs",
+    "deploy:push": "npm test && npm run deploy:check && git push -u origin main"
+  }
+}
